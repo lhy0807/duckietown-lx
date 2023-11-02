@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import sys
 
 # TODO: modify <yourGitHubName> to make this the path to your exercise folder
-EXERCISE_DIRECTORY = "/code/dd21-pid-tuning-lx/packages/project-pid-implementation-Tuxliri"
+EXERCISE_DIRECTORY = "/code/dd21-pid-tuning-lx/packages/project-pid-implementation-<yourGitHubName>"
 GAINS_PATH = EXERCISE_DIRECTORY+"/z_pid.yaml"
 
 sys.path.append(EXERCISE_DIRECTORY)
@@ -33,8 +33,7 @@ class TestPIDOutput():
         )
 
         sim = VerticalDrone(
-                        pid=my_pid_instance,
-                        step_size=10,
+                        pid_controller=my_pid_instance,
                         drag_coeff=drag_coeff,
                         latency=latency,
                         sensor_noise=noise,
